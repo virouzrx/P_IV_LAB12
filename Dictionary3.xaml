@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Z12_RESCONV">
-    <SolidColorBrush x:Key="Brush" Color="DarkCyan"/>
+                    xmlns:local="clr-namespace:lab12">
 
-</ResourceDictionary>
+    <SolidColorBrush x:Key="Brush" Color="Black"    />
+</ResourceDictionary> 

@@ -15,39 +15,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Z12_RESCONV
+namespace lab12
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Model Model { get; set; } = new Model();
+        public Model Model { get; set; } = new Model(); 
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = Model;
         }
 
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        private void grid_Loaded(object sender, RoutedEventArgs e)
         {
-            var test = this.FindResource("Title");
+            var test = this.FindResource("Title"); 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Resources["Brush"] = new SolidColorBrush(Colors.CornflowerBlue);
+            this.Resources["Brush"] = new SolidColorBrush(Colors.DarkMagenta);
             var res = new ResourceDictionary();
             res.Add("test", "test");
             Resources.MergedDictionaries.Add(res);
         }
-
         private void DynamicLoadStyles()
         {
-            string fileName = Environment.CurrentDirectory + @"\\Dictoniary3.xaml";
+            string fileName = Environment.CurrentDirectory + @"\Dictionary3.xaml";
             if (File.Exists(fileName))
             {
-                using(FileStream fs = new FileStream(fileName, FileMode.Open))
+                using (FileStream fs= new FileStream(fileName, FileMode.Open))
                 {
                     ResourceDictionary dic = (ResourceDictionary)XamlReader.Load(fs);
                     Resources.MergedDictionaries.Add(dic);
@@ -60,7 +59,7 @@ namespace Z12_RESCONV
             DynamicLoadStyles();
         }
 
-        private void Button_Click3(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Model.Zoom += 10;
         }

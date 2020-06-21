@@ -6,15 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace Z12_RESCONV.Converter
+namespace lab12.Converter
 {
-    [ValueConversion(typeof(int), typeof(double))]
+    [ValueConversion(typeof(int),typeof(double))]
     public class HeigthZoomConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var zoom = (int)value;
-            return zoom;
+            return zoom; 
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -22,7 +22,7 @@ namespace Z12_RESCONV.Converter
             throw new NotImplementedException();
         }
     }
-    [ValueConversion(typeof(int), typeof(double))]
+    [ValueConversion(typeof(int),typeof(double))]
     public class WidthZoomConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

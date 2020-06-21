@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Z12_RESCONV.Properties
+namespace lab12.Properties
 {
 
 

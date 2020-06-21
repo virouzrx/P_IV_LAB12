@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Z12_RESCONV
+namespace lab12
 {
     public class Model : INotifyPropertyChanged
     {
@@ -16,11 +15,11 @@ namespace Z12_RESCONV
         public int Zoom
         {
             get { return _zoom; }
-            set
-            {
+            set { 
                 _zoom = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Zoom"));
+                PropertyChanged?.Invoke(this,new PropertyChangedEventArgs("Zoom"));
             }
         }
+
     }
 }
